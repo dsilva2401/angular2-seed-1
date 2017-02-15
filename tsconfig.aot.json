@@ -5,7 +5,7 @@
     "experimentalDecorators": true,
     "module": "commonjs",
     "moduleResolution": "node",
-    "outDir": "dist",
+    "outDir": "src/dist",
     "sourceMap": true,
     "sourceRoot": "src",
     "noEmitHelpers": true,

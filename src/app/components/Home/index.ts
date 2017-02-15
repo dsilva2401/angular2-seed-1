@@ -2,8 +2,9 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'home',
-  styleUrls: ['./home.component.css'],
-  templateUrl: './home.component.html'
+  styles: [require('./styles.styl').toString()],
+  template: require('./template.pug')()
 })
 export class HomeComponent {
+
 }

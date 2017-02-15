@@ -1,7 +1,6 @@
-## angular2-seed
+## Angular2 Seed
 
-A simple starter project demonstrating the basic concepts of Angular 2.
-
+A simple angular2 seed with pug and stylus
 
 ### Usage
 - Clone or fork this repository
