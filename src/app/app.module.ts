@@ -6,8 +6,9 @@ import { HttpModule } from '@angular/http';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { UIRouterModule } from 'ui-router-ng2';
 import { components, componentsList } from './components';
+import { services, servicesList } from './services';
 import { AppComponent } from './app';
-import { states } from './app.routes';
+import { statesConfig } from './app.routes';
 
 
 @NgModule({
@@ -17,9 +18,9 @@ import { states } from './app.routes';
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    UIRouterModule.forRoot({ states: states, useHash: true })
+    UIRouterModule.forRoot(statesConfig)
   ],
-  providers: [],
+  providers: [].concat(servicesList),
   bootstrap: [ AppComponent ]
 })
 export class AppModule {}

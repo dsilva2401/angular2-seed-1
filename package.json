@@ -1,12 +1,19 @@
 {
   "name": "angular2-seed",
   "version": "1.0.0",
+  "main": "src/index.html",
   "description": "A simple starter Angular2 project",
   "scripts": {
     "build": "webpack --progress",
     "watch": "npm run build -- --watch",
-    "server": "webpack-dev-server --inline --progress --port 3000 --content-base src",
+    "server": "webpack-dev-server --inline --progress --port 3000 --content-base .",
     "start": "npm run server"
+  },
+  "window": {
+    "width": 1000,
+    "height": 700,
+    "frame": true,
+    "toolbar": false
   },
   "contributors": [
     "Rob Wormald <robwormald@gmail.com>",

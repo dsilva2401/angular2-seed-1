@@ -1,0 +1,68 @@
+top-bar-height = 60px
+state-indicator-height = 50px
+
+button
+    &:focus
+        outline: none
+
+:host
+    .top-bar
+        position: absolute
+        left: 0px
+        top: 0px
+        width: 100%
+        height: top-bar-height
+        background: #111
+
+        .logo
+            float: left
+            margin: 10px
+            width: "calc( %s - 20px )" % top-bar-height
+            height: "calc( %s - 20px )" % top-bar-height
+        
+        .title
+            float: left
+            padding: 0px 10px
+            height: 100%
+            background: none
+            border: none
+            color: #eee
+            font-size: 16px
+    
+    .state-indicator
+        position: absolute
+        left: 0px
+        top: top-bar-height
+        width: 100%
+        height: state-indicator-height
+        background: #222
+        padding: 0px
+
+        p
+            text-align: center
+
+            button, span
+                background: none
+                border: none
+                height: 100%
+                color: #bbb
+                font-size: 14px
+                font-family: Arial, Helvetica, sans-serif
+                cursor: default
+                transition: All 0.5s ease
+                -webkit-transition: All 0.5s ease
+                -moz-transition: All 0.5s ease
+                -o-transition: All 0.5s ease
+            
+            button.active
+                color: #eee
+                font-size: 16px
+
+    
+    .state-content
+        position: absolute
+        left: 0px
+        top: (top-bar-height+state-indicator-height)
+        width: 100%
+        height: "calc( 100% - %s )" % (top-bar-height+state-indicator-height)
+        background: #333

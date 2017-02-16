@@ -1,0 +1,106 @@
+search-container-left-margin = 150px
+search-container-top-margin = 40px
+search-container-height = 34px
+search-button-width = 100px
+results-container-left-margin = search-container-left-margin*0.5
+results-container-top-margin = search-container-top-margin*1.8+search-container-height
+entries-per-row = 5
+entries-margin = 10px
+entries-width-factor = 1/entries-per-row
+entries-height = 170px
+entries-title-height = 30px
+
+.state-shown
+    opacity: 1
+    transition: All 0.5s ease
+    -webkit-transition: All 0.5s ease
+    -moz-transition: All 0.5s ease
+    -o-transition: All 0.5s ease
+
+.state-hidden
+    opacity: 0
+    transition: All 0 ease
+    -webkit-transition: All 0 ease
+    -moz-transition: All 0 ease
+    -o-transition: All 0 ease
+
+:host
+
+    .search
+        position: absolute
+        left: search-container-left-margin
+        top: search-container-top-margin
+        width: "calc( 100% - %s )" % (search-container-left-margin*2)
+        height: search-container-height
+
+        *
+            float: left
+
+        input
+            border: none
+            background: #EEE
+            height: 100%
+            width: "calc( 100% - %s )" % search-button-width
+            font-size: 17px
+            font-family: Arial, Helvetica, sans-serif
+            color: #333
+            text-align: center
+
+            &:focus
+                outline: none
+
+        button
+            border: none
+            background: #222
+            height: 100%
+            width: search-button-width
+            font-size: 15px
+            font-family: Arial, Helvetica, sans-serif
+            color: #EEE
+    
+    .results-container
+        position: absolute
+        left: results-container-left-margin
+        top: results-container-top-margin
+        width: "calc( 100% - %s )" % (results-container-left-margin*2)
+        height: "calc( 100% - %s )" % results-container-top-margin
+        overflow: auto
+
+        .entry
+            float: left
+            width: "calc( 100% * %s - %s * 2  )" % (entries-width-factor entries-margin)
+            height: entries-height
+            margin: entries-margin
+            opacity: 0.7
+            transition: All 0.5s ease
+            -webkit-transition: All 0.5s ease
+            -moz-transition: All 0.5s ease
+            -o-transition: All 0.5s ease
+            cursor: pointer
+            background: #111
+            overflow: hidden
+
+            &:hover
+                opacity: 1
+
+            .thumbnail
+                width: 100%
+                height: "calc( 100% - %s )" % entries-title-height
+                background: #222
+
+            .thumbnail-default
+                opacity: 0.3
+                -webkit-filter: blur(3px) grayscale(50%)
+                -moz-filter: blur(3px) grayscale(50%)
+                -o-filter: blur(3px) grayscale(50%)
+                -ms-filter: blur(3px) grayscale(50%)
+                filter: blur(3px) grayscale(50%)
+            
+            .name
+                width: 100%
+                height: entries-title-height
+                background: #111
+                border: none
+                color: #ccc
+                font-family: Arial, Helvetica, sans-serif
+                font-size: 14px
