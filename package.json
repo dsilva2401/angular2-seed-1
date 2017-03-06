@@ -47,6 +47,7 @@
     "angular2-template-loader": "^0.6.0",
     "awesome-typescript-loader": "^2.2.4",
     "css-loader": "^0.25.0",
+    "gulp": "^3.9.1",
     "nib": "^1.1.2",
     "pug": "^2.0.0-beta11",
     "pug-loader": "^2.3.0",
