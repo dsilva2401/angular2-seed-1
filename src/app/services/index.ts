@@ -1,8 +1,8 @@
-import { StagesManager } from './StagesManager';
-export { StagesManager };
+import { DemoService } from './DemoService';
+export { DemoService };
 
 export let services = {
-    StagesManager: StagesManager,
+    DemoService: DemoService,
 }
 
 export let servicesList = Object.keys(services).map((key) => {

@@ -1,15 +1,9 @@
-import { DevelopComponent } from './Develop';
-import { ExploreComponent } from './Explore';
-import { PreviewComponent } from './Preview';
-import { PublishComponent } from './Publish';
-import { StudioComponent } from './Studio';
+import { DemoComponent } from './Demo';
+import { MainComponent } from './Main';
 
 export let components = {
-    DevelopComponent: DevelopComponent,
-    ExploreComponent: ExploreComponent,
-    PreviewComponent: PreviewComponent,
-    PublishComponent: PublishComponent,
-    StudioComponent: StudioComponent,
+    DemoComponent: DemoComponent,
+    MainComponent: MainComponent,
 }
 
 export let componentsList = Object.keys(components).map((key) => {

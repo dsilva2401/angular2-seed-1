@@ -4,24 +4,12 @@ import { components } from './components';
 
 export let statesConfig: any = {
   useHash: true,
-  otherwise: '/explore',
+  otherwise: '/demo',
   states: [
     {
-      name: 'explore',
-      url: '/explore',
-      component: components.ExploreComponent
-    }, {
-      name: 'develop',
-      url: '/develop',
-      component: components.DevelopComponent
-    }, {
-      name: 'preview',
-      url: '/preview',
-      component: components.PreviewComponent
-    }, {
-      name: 'publish',
-      url: '/publish',
-      component: components.PublishComponent
+      name: 'demo',
+      url: '/demo',
+      component: components.DemoComponent
     }
   ]
 }
